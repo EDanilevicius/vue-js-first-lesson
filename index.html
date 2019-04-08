@@ -8,10 +8,7 @@
   </head>
   <body>
     <div id="app">
-      <h1>
-        {{ msg }}
-      </h1>
-      <input :value="msg" type="text" @input="handleInput" />
+      <a href="/test" v-on:click.prevent="handleClick('asdsss', $event)">asd </a>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script>
@@ -23,8 +20,8 @@
           };
         },
         methods: {
-          handleInput(event) {
-            this.msg = event.target.value;
+          handleClick(string, e) {
+            console.log(string, e);
           },
         },
       });
